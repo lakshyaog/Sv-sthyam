@@ -40,19 +40,41 @@ git clone https://github.com/lakshyaog/Sv-sthyam.git
 cd Sv-sthyam
 ```
 
-2. Install frontend dependencies
+2. **⚠️ IMPORTANT: Set up environment variables**
+```bash
+cd MEDTECHWEBAPP_ML_Final-main/health/server
+cp .env.example .env
+# Edit .env and add your MongoDB credentials
+```
+
+3. Install frontend dependencies
 ```bash
 cd MEDTECHWEBAPP_ML_Final-main/health
 npm install
 ```
 
-3. Install backend dependencies
+4. Install backend dependencies
 ```bash
 cd server
 npm install
 ```
 
-4. Start the development servers
+5. Start the development servers
+```bash
+# Start backend server
+cd MEDTECHWEBAPP_ML_Final-main/health/server
+npm start
+
+# In another terminal, start frontend
+cd MEDTECHWEBAPP_ML_Final-main/health
+npm run dev
+```
+
+## Security
+
+⚠️ **Please read [SECURITY.md](SECURITY.md) for important security information.**
+
+Never commit `.env` files or hardcode credentials in source code.
 
 ## License
 
