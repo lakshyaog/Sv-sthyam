@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-// const URI = "mongodb://127.0.0.1:27017/mern_admin";
-// mongoose.connect(URI);
-const URI =
-  "mongodb+srv://harshit26092004:gEuwPxiTsdMdAvFp@cluster0.aycv9iv.mongodb.net/nits";
+// Use environment variable for MongoDB connection
+const URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/mern_admin";
 
 const connectDb = async () => {
   try {
